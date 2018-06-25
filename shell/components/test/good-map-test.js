@@ -12,18 +12,20 @@ afterEach(function() {
 });
 
 describe('GoodMap', function() {
-  customElements.define('test-good-map', class extends window.GoodMap {
-    constructor() {
-      super();
-      this._mapOptionsForTest = {};
-    }
-    connectedCallback() {
-      this.map = {
-        setOptions: options => {
-          this._mapOptionsForTest = options;
-        }
-      };
-    }
+  before(function() {
+    customElements.define('test-good-map', class extends window.GoodMap {
+      constructor() {
+        super();
+        this._mapOptionsForTest = {};
+      }
+      connectedCallback() {
+        this.map = {
+          setOptions: options => {
+            this._mapOptionsForTest = options;
+          }
+        };
+      }
+    });
   });
 
   describe('#attributeChangedCallback', function() {

@@ -7,6 +7,9 @@ module.exports = {
     "ecmaVersion": 2017,
     "sourceType": "module",
   },
+  "plugins": [
+     "mocha",
+  ],
   "rules": {
     // Things we do, but probably shouldn't.
     "no-console": "off",
@@ -36,6 +39,18 @@ module.exports = {
 
     // Things we might care about if we could automate them.
     "curly": "off", // curly braces even single line blocks, --fix does something weird.
+
+    // Mocha Lint
+      "mocha/handle-done-callback": "error",
+      "mocha/no-exclusive-tests": "error",
+      "mocha/no-global-tests": "error",
+      "mocha/no-identical-title": "error",
+      "mocha/no-mocha-arrows": "error",
+      "mocha/no-nested-tests": "error",
+      "mocha/no-return-and-callback": "error",
+      "mocha/no-setup-in-describe": "error",
+
+      
   },
   env: {
     browser: true,

@@ -35,7 +35,7 @@ describe('type integration', () => {
     assert.equal(recipe.handles[0].type.primitiveType().canWriteSuperset.entitySchema.name, 'Product');
   });
 
-  it('a subtype matches to a supertype that wants to be read when a handle exists', async () => {
+  it('a subtype matches to a supertype that wants to be read when a handle exists - Product', async () => {
     let manifest = await setup();
 
     let recipe = manifest.recipes[1];
@@ -46,7 +46,7 @@ describe('type integration', () => {
     assert.equal(recipe.handles[0].type.primitiveType().entitySchema.name, 'Product');
   });
 
-  it('a subtype matches to a supertype that wants to be read when a handle exists', async () => {
+  it('a subtype matches to a supertype that wants to be read when a handle exists - Lego', async () => {
     let manifest = await setup();
 
     let recipe = manifest.recipes[1];
